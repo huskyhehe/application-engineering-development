@@ -5,7 +5,7 @@
 
 /************************************************************************************
  * Tings need to be clarified:
- * Does the palindrome need to a "strict palindrome"?
+ * Does the palindrome need to be a "strict palindrome"?
  *    If yes,
  *         it reads the same forward and backward without any converting or removing
  *         See Method 1 and Method 3;
