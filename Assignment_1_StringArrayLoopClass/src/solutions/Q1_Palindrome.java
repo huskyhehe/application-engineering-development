@@ -18,7 +18,9 @@
 package solutions;
 
 class Solution1 {
+    
     public static void main(String[] args) {
+        
         // Test Cases
         String str1 = "A man, a plan, a canal: Panama";
         String str2 = "bnb";
@@ -42,6 +44,7 @@ class Solution1 {
         System.out.println(isPalindrome_pointers(str2));
     }
 
+    
     /*
     Method 1: create a StringBuilder and reverse (strict)
     - Time Complexity: O(n)
@@ -72,6 +75,7 @@ class Solution1 {
         return sb.toString().equals(sb.reverse().toString());
     }
 
+    
     /*
     Method 3: two pointers (strict)
      - Time Complexity: O(n)
@@ -94,6 +98,7 @@ class Solution1 {
         return true;
     }
 
+    
     /*
     Method 4: two pointers
      - Time Complexity: O(n)
