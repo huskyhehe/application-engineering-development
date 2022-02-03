@@ -2,6 +2,6 @@
 
 **Due: Tue Feb 8, 11:59pm PT** 
 
-# Requirements
+## Requirements
 
 - Do not modify the html file
