@@ -18,15 +18,15 @@ class Solution3 {
      */
     public boolean containsDuplicate_brute(String str) {
         if (str.length() <= 1)
-            return true;
+            return false;
 
         for (int i = 0; i < str.length(); i++) {
             for (int j = i + 1; j < str.length(); j++) {
                 if (str.charAt(i) == str.charAt(j))
-                    return false;
+                    return true;
             }
         }
-        return true;
+        return false;
     }
 
     /*
@@ -36,16 +36,16 @@ class Solution3 {
  */
     public boolean containsDuplicate_sort(String str) {
         if (str.length() <= 1)
-            return true;
+            return false;
 
         char[] arr = str.toCharArray();
         Arrays.sort(arr);
 
         for (int i = 0; i < arr.length - 1; i++) {
             if (arr[i] == arr[i+1])
-                return false;
+                return true;
         }
-        return true;
+        return false;
     }
 
     /*
@@ -55,14 +55,14 @@ class Solution3 {
      */
     public boolean containsDuplicate_set(String str) {
         if (str.length() <= 1)
-            return true;
+            return false;
 
         Set<Character> set = new HashSet<>();
 
         for (int i = 0; i < str.length(); i++) {
             if (!set.add(str.charAt(i)))
-                return false;
+                return true;
         }
-        return true;
+        return false;
     }
 }
