@@ -5,7 +5,7 @@
 ## Solutions
 
 - [01 Palindrome](https://github.com/huskyhehe/info5100/blob/main/Assignment_1_StringArrayLoopClass/src/solutions/Q1_Palindrome.java)
-- [02 isUnique](https://github.com/huskyhehe/info5100/blob/main/Assignment_1_StringArrayLoopClass/src/solutions/Q2_isUnique.java)
+- [02 UniqueCharacter](https://github.com/huskyhehe/info5100/blob/main/Assignment_1_StringArrayLoopClass/src/solutions/Q2_isUnique.java)
 - [03 ContainsDuplicate](https://github.com/huskyhehe/info5100/blob/main/Assignment_1_StringArrayLoopClass/src/solutions/Q3_ContainsDuplicate.java)
 - [04 Anagram](https://github.com/huskyhehe/info5100/blob/main/Assignment_1_StringArrayLoopClass/src/solutions/Q4_Anagram.java)
 - [05 LeapYear](https://github.com/huskyhehe/info5100/blob/main/Assignment_1_StringArrayLoopClass/src/solutions/Q5_LeapYear.java)
