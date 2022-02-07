@@ -10,13 +10,27 @@ import java.util.HashSet;
 import java.util.Set;
 
 class Solution3 {
+    public static void main(String[] args) {
+        // Test Cases
+        String str1 = "welcome";
+        String str2 = "north";
+        // Method 1
+        System.out.println(containsDuplicate_brute(str1));
+        System.out.println(containsDuplicate_brute(str2));
+        // Method 2
+        System.out.println(containsDuplicate_sort(str1));
+        System.out.println(containsDuplicate_sort(str2));
+        // Method 3
+        System.out.println(containsDuplicate_set(str1));
+        System.out.println(containsDuplicate_set(str2));
+    }
 
     /*
     Method 1: Brute Force
     - Time Complexity:  O(n^2)
     - Space Complexity: O(n)
      */
-    public boolean containsDuplicate_brute(String str) {
+    public static boolean containsDuplicate_brute(String str) {
         if (str.length() <= 1)
             return false;
 
@@ -34,7 +48,7 @@ class Solution3 {
     - Time Complexity: O(n log n)
     - Space Complexity:
  */
-    public boolean containsDuplicate_sort(String str) {
+    public static boolean containsDuplicate_sort(String str) {
         if (str.length() <= 1)
             return false;
 
@@ -53,7 +67,7 @@ class Solution3 {
     - Time Complexity: O(n)
     - Space Complexity: O(n)
      */
-    public boolean containsDuplicate_set(String str) {
+    public static boolean containsDuplicate_set(String str) {
         if (str.length() <= 1)
             return false;
 
