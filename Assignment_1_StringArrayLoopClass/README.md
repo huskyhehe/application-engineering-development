@@ -1,6 +1,6 @@
 # Assignment 1 - String, Array, Loop, Class
 
-**Due: Tue Feb 8, 11:59pm PT** 
+**Due: Tue Feb 8, 23:59 PT** 
 
 ## Solutions
 
