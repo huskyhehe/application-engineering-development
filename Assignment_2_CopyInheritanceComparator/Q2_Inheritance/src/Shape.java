@@ -48,7 +48,7 @@ public class Shape {
         if (getName() != null && getColor() != null) {
             System.out.println("Name: " + getName() + " | Color: " + getColor());
         }else {
-            System.out.println("This shape doesn't own a name and color");
+            System.out.println("This shape doesn't have a name and color");
         }
         System.out.println("Perimeter: " + getPerimeter() + " | Area: " + getArea());
     }
