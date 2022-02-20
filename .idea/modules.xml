@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/Assignment_1_StringArrayLoopClass/Assignment_1_StringArrayLoopClass.iml" filepath="$PROJECT_DIR$/Assignment_1_StringArrayLoopClass/Assignment_1_StringArrayLoopClass.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/INFO5100.iml" filepath="$PROJECT_DIR$/.idea/INFO5100.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Lectures/Lecture_4_AccessModifier/Lecture_4_AccessModifier.iml" filepath="$PROJECT_DIR$/Lectures/Lecture_4_AccessModifier/Lecture_4_AccessModifier.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Lectures/Lecture_4_Inheritance/Lecture_4_Inheritance.iml" filepath="$PROJECT_DIR$/Lectures/Lecture_4_Inheritance/Lecture_4_Inheritance.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Lectures/Lecture_4_InterfaceExample/Lecture_4_InterfaceExample.iml" filepath="$PROJECT_DIR$/Lectures/Lecture_4_InterfaceExample/Lecture_4_InterfaceExample.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Lectures/Lecture_5_SingletonPattern/Lecture_5_SingletonPattern.iml" filepath="$PROJECT_DIR$/Lectures/Lecture_5_SingletonPattern/Lecture_5_SingletonPattern.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Assignment_2_CopyInheritanceComparator/Q1_Copy/Q1_Copy.iml" filepath="$PROJECT_DIR$/Assignment_2_CopyInheritanceComparator/Q1_Copy/Q1_Copy.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Assignment_2_CopyInheritanceComparator/Q2_Inheritance/Q2_Inheritance.iml" filepath="$PROJECT_DIR$/Assignment_2_CopyInheritanceComparator/Q2_Inheritance/Q2_Inheritance.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Assignment_2_CopyInheritanceComparator/Q3_Inheritance/Q3_Inheritance.iml" filepath="$PROJECT_DIR$/Assignment_2_CopyInheritanceComparator/Q3_Inheritance/Q3_Inheritance.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Assignment_2_CopyInheritanceComparator/Q4_Comparator/Q4_Comparator.iml" filepath="$PROJECT_DIR$/Assignment_2_CopyInheritanceComparator/Q4_Comparator/Q4_Comparator.iml" />
+    </modules>
+  </component>
+</project>
