@@ -5,6 +5,6 @@ public class Professor extends Person {
     }
 
     public void giveQuiz(String question) {
-        System.out.println("Quiz Question");
+        System.out.println("Quiz Question is: " + question);
     }
 }
