@@ -1,6 +1,15 @@
 # Design Patterns
 
 ## 1 Singleton Pattern
+The singleton pattern is one of the simplest design patterns.  
+
+Definition:
+The singleton pattern is a design pattern that restricts the instantiation of a class to one object.  
+
+Singletons often control access to resources, such as database connections or sockets.  
+
+For example, if you have a license for only one connection for your database or your JDBC driver has trouble with multithreading, the Singleton makes sure that only one connection is made or that only one thread can access the connection at a time.
+
 The easiest implementation consists of:
  * a private constructor
  * a field to hold its result
