@@ -1,4 +1,24 @@
 # Design Patterns
+
+## 1 Singleton Pattern
+The easiest implementation consists of:
+ * a private constructor
+ * a field to hold its result
+ * a static accessor method with a name like getInstance().
+```java
+ * public class Singleton {
+ *     private Singleton() { }                    // a private constructor
+ *     private static Singleton _instance;        // a field to hold its result
+ *     public static Singleton getInstance() {    // a static accessor method
+ *         if (_instance == null) {
+ *             _instance = new Singleton();
+ *         }
+ *         return _instance;
+ *     }
+ * }
+```
+
+
 ## 3 PubSub Design Pattern
 ### Application:
 - The publisher-subscriber is a familiar concept given the rise of YouTube, Facebook and other social media services. 
