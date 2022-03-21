@@ -15,16 +15,16 @@ The easiest implementation consists of:
  * a field to hold its result
  * a static accessor method with a name like getInstance().
 ```java
- * public class Singleton {
- *     private Singleton() { }                    // a private constructor
- *     private static Singleton _instance;        // a field to hold its result
- *     public static Singleton getInstance() {    // a static accessor method
- *         if (_instance == null) {
- *             _instance = new Singleton();
- *         }
- *         return _instance;
- *     }
- * }
+public class Singleton {
+    private Singleton() {}                    // a private constructor
+    private static Singleton _instance;       // a field to hold its result
+    public static Singleton getInstance() {   // a static accessor method
+        if (_instance == null) {
+            _instance = new Singleton();
+        }
+        return _instance;
+    }
+}
 ```
 
 
