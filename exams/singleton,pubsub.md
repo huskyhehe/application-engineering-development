@@ -26,7 +26,7 @@ This is how you create singleton design pattern
 * 5. Create a private static object which will be used in locking the instance
 * 6. In the function created in step 4 Lock the creation of object
 * 7. Optionally Do double locking for performance
-    * */
+
 ```java
 public class Camera {
 
