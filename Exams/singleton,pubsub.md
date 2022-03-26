@@ -1,5 +1,5 @@
-# 4 Design Pattern
-## 4.1 Singleton
+
+## Singleton
 ```java
 public class Singleton {
 
@@ -70,4 +70,4 @@ public class Main {
 }
 ```
 
-## 4.2 Pubsub
+## Pubsub
