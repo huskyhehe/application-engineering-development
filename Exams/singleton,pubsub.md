@@ -1,22 +1,5 @@
 
 ## Singleton
-```java
-public class Singleton {
-
-    // a private default constructor
-    private Singleton() {} 
-
-    // a private field to hold its result                   
-    private static Singleton _instance;
-
-    //a public static accessor method
-    public static Singleton getInstance() {      
-        if (_instance == null)
-              _instance = new Singleton();
-        return _instance;
-    }
-}
-```
 
 This is how you create singleton design pattern
 * 1. Create a class

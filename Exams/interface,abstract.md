@@ -1,5 +1,5 @@
 ## Interface
-A is capable of [doing this]  
+- A is capable of [doing this]  
 eg:  
 “Sender is capable of sending a file”. ImageSender implements the interface for sending an image to the target.
 ```java
@@ -16,39 +16,44 @@ public class ImageSender implements Sender {
 ```
 
 ## Abstract Class
-A is a B  
+- A is a B  
+- abstract classes cannot be instantiated  
 eg:  
 The Car class, which extends the Vehicle class, overrides all the methods by providing the car's implementation details (“Car is a Vehicle”).
 ```java
-public abstract class Vehicle {
-
+abstract class Animal {
     // declare fields
-       
-    // declare abstract methods
-    protected abstract void start();
-    protected abstract void stop();
-    protected abstract void changeGear();
-    
-    // declare nonabstract methods
-    // such as standard getters and setters
+
+    // non-abstract methods
+    public void eat() {
+        System.out.println("I can eat.")
+    }
+    // abstract methods
+    abstract void makeSound();
 }
 ```
 ```java
-public class Car extends Vehicle {
-
+class Dog extends Animal {
+    // provide implementation of abstract method
     @Override
-    protected void start() {
-        // code implementation details on starting a car.
+    public void makeSound() {
+        System.out.println("Bark bark");
     }
+}
+```
+```java
+class Main {
+    public static void main(String[] args) {
 
-    @Override
-    protected void stop() {
-        // code implementation details on stopping a car.
-    }
+        // create an object of Dog class
+        Dog puppy = new Dog();
 
-    @Override
-    protected void changeGear() {
-        // code implementation details on changing the car gear.
+        puppy.makeSound();
+        puppy.eat();
+
+        // Output:   
+        // Bark bark
+        // I can eat.
     }
 }
 ```
