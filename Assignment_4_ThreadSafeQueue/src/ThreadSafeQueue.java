@@ -40,13 +40,11 @@ public class ThreadSafeQueue<T> {
         try {
             while (size == capacity)
                 notFull.await();
-
+            // enqueue
             enqueue(data);
             size ++;
-
             if (size + 1 < capacity)
                 notFull.signal();
-
         } finally {
             lock.unlock();
         }
@@ -61,16 +59,16 @@ public class ThreadSafeQueue<T> {
         }
     }
 
+
     public T remove() throws InterruptedException {
         T dataToRemove;
         lock.lock();
         try {
             while (size == 0)
                 notEmpty.await();
-
+            // dequeue
             dataToRemove = dequeue();
             size --;
-
             if (size > 1)
                 notEmpty.signal();
         } finally {
@@ -88,20 +86,23 @@ public class ThreadSafeQueue<T> {
         return dataToRemove;
     }
 
-    public boolean isEmpty() {
-        return size == 0;
-    }
-
-    public boolean isFull() {
-        return size == capacity;
-    }
-
 
     public T peek() throws InterruptedException {
         while (size == 0)
             notEmpty.await();
         return head.data;
     }
+
+
+    public boolean isEmpty() {
+        return size == 0;
+    }
+
+
+    public boolean isFull() {
+        return size == capacity;
+    }
+
 
 
     // Print data in the ThreadSafeQueue
