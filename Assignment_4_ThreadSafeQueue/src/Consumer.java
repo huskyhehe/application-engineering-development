@@ -14,7 +14,7 @@ public class Consumer implements Runnable {
             e.printStackTrace();
         }
 
-        for (int i = 0; i < 5; i++) {
+        while (!msgQueue.isEmpty()) {
             try {
                 Thread.sleep(10);
                 Message msg = msgQueue.remove();
