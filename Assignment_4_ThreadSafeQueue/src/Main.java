@@ -1,59 +1,21 @@
 public class Main {
-    public static void main(String[] args) throws InterruptedException {
+    public static void main(String[] args) {
+        // Basic Test
+        BasicTest test = new BasicTest();
+        test.integerQueueTest();
+        test.stringQueueTest();
 
-        // Init an Integer ThreadSafeQueue
-        ThreadSafeQueue<Integer> intQueue = new ThreadSafeQueue<>(5);
+        System.out.println("-------------------------------------");
 
-        // Test add function
-        intQueue.add(5);
-        intQueue.add(10);
-        intQueue.add(15);
-        intQueue.add(20);
-        intQueue.add(25);
-        intQueue.printData();
+        // Producer & Consumer Message-Passing Test
+        ThreadSafeQueue<Message> msgQueue = new ThreadSafeQueue<>(10);
+        Producer producer = new Producer(msgQueue);
+        Consumer consumer = new Consumer(msgQueue);
 
-        // Test isFull function
-        System.out.println("isFull: " + intQueue.isFull());
+        // start producer to produce messages in msgQueue
+        new Thread(producer).start();
 
-        // Test remove function
-        System.out.println("remove data: " + intQueue.remove());
-        System.out.println("remove data: " + intQueue.remove());
-        intQueue.printData();
-
-        // Test peek function
-        System.out.println("peek data: " + intQueue.peek());
-
-        // Test isEmpty function
-        System.out.println("isEmpty: " + intQueue.isEmpty());
-
-
-        System.out.println("--------------------------------------------------");
-
-
-        // Init a String ThreadSafeQueue
-        ThreadSafeQueue<String> strQueue = new ThreadSafeQueue<>(10);
-
-        // Test add function
-        strQueue.add("Amy");
-        strQueue.add("Bob");
-        strQueue.add("Carrie");
-        strQueue.add("Doris");
-        strQueue.add("Eric");
-        strQueue.printData();
-
-        // Test isFull function
-        System.out.println("isFull: " + strQueue.isFull());
-
-        // Test remove function
-        System.out.println("remove data: " + strQueue.remove());
-        System.out.println("remove data: " + strQueue.remove());
-        strQueue.printData();
-
-        // Test peek function
-        System.out.println("peek data: " + strQueue.peek());
-
-        // Test isEmpty function
-        System.out.println("isEmpty: " + strQueue.isEmpty());
+        // start consumer to consume messages from msgQueue
+        new Thread(consumer).start();
     }
 }
-
