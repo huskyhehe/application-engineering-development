@@ -1,3 +1,8 @@
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+import java.util.Locale;
+
 public class Main {
 
     public static void main(String[] args) {
@@ -26,5 +31,21 @@ public class Main {
             System.out.println("second line");
             System.out.println("third line");
         }).start();
+
+
+
+        // Example
+        List<Employee> employees = new ArrayList<>();
+//        Collections.sort(employees, (emp1, emp2) -> emp1.age.compareTo(emp2.age));
+
+
+        SimpleString strClass = new SimpleString();
+        System.out.println(strClass.upperCassAndConcat("abc", "def"));
+
+        System.out.println(new SimpleString().upperCassAndConcat("sss", "fff"));
+
+        IStringFunctions isf = (str1, str2) -> {
+            return str1.toLowerCase() + str2.toUpperCase();
+        };
     }
 }
