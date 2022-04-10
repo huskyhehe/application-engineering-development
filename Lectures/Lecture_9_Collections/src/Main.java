@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.HashSet;
 
 public class Main {
 
@@ -18,5 +19,10 @@ public class Main {
         list2.add(10);
 
         list.addAll(list2);
+    }
+
+    public static void hashSetExample() {
+        HashSet<Integer> set = new HashSet<>();
+        set.add(2);
     }
 }
