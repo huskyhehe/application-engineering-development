@@ -5,12 +5,6 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Queue;
 
-/**
-Given a string containing digits from 2-9 inclusive,
-return all possible letter combinations that the number could represent.
-Return the answer in any order. (Medium)
- */
-
 public class PhoneLetterCombinations {
 
     String[] letterArr = new String[]
@@ -18,7 +12,7 @@ public class PhoneLetterCombinations {
     ArrayList<String> res = new ArrayList<>();
 
     public List<String> letterCombinations(String digits) {
-        if (digits.length() != 0) return res;
+        if (digits.length() == 0) return res;
 
         Queue<String> queue = new LinkedList<>();
         for (int i = 0; i < digits.length(); i ++) {
