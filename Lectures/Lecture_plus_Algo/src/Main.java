@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 import stack.ValidParentheses;              // easy
 import twoPointer.StringCompression;
 import map.LongestSubStrWithoutRepeatChar;  // easy
@@ -5,12 +7,12 @@ import dfs.Islands;
 import binary.MedianSortedArr;              // hard
 import dp.MaxSumSubArray;                   // easy
 import stack.MinStack;                      // easy
-
-
+import symmetry.UniqueIntsSumZero;          // easy
 
 import dp.StockBestTime;                    // easy
 
 import binary.RotatedSortedArrSearch;
+
 
 
 
@@ -28,7 +30,6 @@ public class Main {
         // Q2 string compression
         System.out.println("\nQuestion2------↓↓");
         StringCompression solution2 = new StringCompression();
-
 
 
         // Q3 easy
@@ -74,8 +75,11 @@ public class Main {
 
 
         // Q8 easy
-        // https://leetcode-cn.com/problems/find-n-unique-integers-sum-up-to-zero/
-
+        System.out.println("\nQuestion8------↓↓");
+        UniqueIntsSumZero solution8 = new UniqueIntsSumZero();
+        // Test case
+        System.out.println(Arrays.toString(solution8.sumZero(7)));       // expects: vary
+        System.out.println(Arrays.toString(solution8.sumZero(4)));       // expects: vary
 
 
         // Q9
@@ -83,13 +87,12 @@ public class Main {
 
         // Q10 easy
         System.out.println("\nQuestion10-----↓↓");
-        StockBestTime solution8 = new StockBestTime();
+        StockBestTime solution10 = new StockBestTime();
         // Test case
-        int[] testCase8_1 = new int[]{7,1,5,3,6,4};
-        int[] testCase8_2 = new int[]{7,6,8,3,1};
-        System.out.println(solution8.maxProfit(testCase8_1));      // expects: 5
-        System.out.println(solution8.maxProfit(testCase8_2));      // expects: 2
-
+        int[] testCase10_1 = new int[]{7,1,5,3,6,4};
+        int[] testCase10_2 = new int[]{7,6,8,3,1};
+        System.out.println(solution10.maxProfit(testCase10_1));      // expects: 5
+        System.out.println(solution10.maxProfit(testCase10_2));      // expects: 2
 
 
         // Q12
