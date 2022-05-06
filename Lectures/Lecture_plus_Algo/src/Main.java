@@ -1,12 +1,17 @@
-import binary.RotatedSortedArrSearch;
 import stack.ValidParentheses;              // easy
-
+import twoPointer.StringCompression;
 import map.LongestSubStrWithoutRepeatChar;  // easy
-
-
+import dfs.Islands;
+import binary.MedianSortedArr;              // hard
 import dp.MaxSumSubArray;                   // easy
 import stack.MinStack;                      // easy
+
+
+
 import dp.StockBestTime;                    // easy
+
+import binary.RotatedSortedArrSearch;
+
 
 
 public class Main {
@@ -21,6 +26,9 @@ public class Main {
 
 
         // Q2 string compression
+        System.out.println("\nQuestion2------↓↓");
+        StringCompression solution2 = new StringCompression();
+
 
 
         // Q3 easy
@@ -33,12 +41,14 @@ public class Main {
 
         // Q4
         // https://leetcode-cn.com/problems/number-of-islands/solution/dao-yu-lei-wen-ti-de-tong-yong-jie-fa-dfs-bian-li-/
-        // System.out.println("\nQuestion4------↓↓");
-        // Islands solution4 = new Islands();
+         System.out.println("\nQuestion4------↓↓");
+         Islands solution4 = new Islands();
 
 
         // Q5 hard!!
         // https://leetcode-cn.com/problems/median-of-two-sorted-arrays/
+        System.out.println("\nQuestion5------↓↓");
+        MedianSortedArr solution5 = new MedianSortedArr();
 
 
         // Q6 easy
@@ -67,6 +77,10 @@ public class Main {
         // https://leetcode-cn.com/problems/find-n-unique-integers-sum-up-to-zero/
 
 
+
+        // Q9
+
+
         // Q10 easy
         System.out.println("\nQuestion10-----↓↓");
         StockBestTime solution8 = new StockBestTime();
@@ -77,9 +91,16 @@ public class Main {
         System.out.println(solution8.maxProfit(testCase8_2));      // expects: 2
 
 
+
         // Q12
         System.out.println("\nQuestion12-----↓↓");
         RotatedSortedArrSearch solution12 = new RotatedSortedArrSearch();
+        // Test case
+        int[] testCase12_1 = new int[]{5,1,3};
+        int[] testCase12_2 = new int[]{4,5,6,7,0,1,2};
+        System.out.println(solution12.search(testCase12_1, 5));     // expects: 0
+        System.out.println(solution12.search(testCase12_2, 3));     // expects: -1
+
 
 
 //        Q13
