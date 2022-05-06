@@ -5,7 +5,6 @@ import java.util.HashMap;
 import java.util.LinkedList;
 
 public class ValidParentheses {
-
     public boolean isValid(String s) {
         if (s.length() % 2 == 1) return false;
 

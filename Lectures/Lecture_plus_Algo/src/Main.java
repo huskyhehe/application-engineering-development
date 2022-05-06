@@ -30,6 +30,9 @@ public class Main {
         // Q2 string compression
         System.out.println("\nQuestion2------↓↓");
         StringCompression solution2 = new StringCompression();
+        // Test case
+        char[] testCase2_1 = new char[]{'a','a','b','b','c','c','c'};
+        System.out.println(solution2.compress(testCase2_1));        // expects: 6
 
 
         // Q3 easy
@@ -41,9 +44,16 @@ public class Main {
 
 
         // Q4
-        // https://leetcode-cn.com/problems/number-of-islands/solution/dao-yu-lei-wen-ti-de-tong-yong-jie-fa-dfs-bian-li-/
          System.out.println("\nQuestion4------↓↓");
          Islands solution4 = new Islands();
+         // Test case
+        char[][] testCase4_1 = new char[][]{
+            {'1','1','0','0','0'},
+            {'1','1','0','0','0'},
+            {'0','0','1','0','0'},
+            {'0','0','0','1','1'}
+        };
+        System.out.println(solution4.numIslands(testCase4_1));      // expects: 3
 
 
         // Q5 hard!!
