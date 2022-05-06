@@ -1,3 +1,4 @@
+import binary.RotatedSortedArrSearch;
 import stack.ValidParentheses;              // easy
 
 import map.LongestSubStrWithoutRepeatChar;  // easy
@@ -6,6 +7,7 @@ import map.LongestSubStrWithoutRepeatChar;  // easy
 import dp.MaxSumSubArray;                   // easy
 import stack.MinStack;                      // easy
 import dp.StockBestTime;                    // easy
+
 
 public class Main {
     public static void main(String[] args) {
@@ -17,6 +19,7 @@ public class Main {
         System.out.println(solution1.isValid("()[]{}"));    // expects: true
         System.out.println(solution1.isValid("(]"));        // expects: false
 
+
         // Q2 string compression
 
 
@@ -27,13 +30,16 @@ public class Main {
         System.out.println(solution3.lengthOfLongestSubstring("bbbbb"));      // expects: 1
         System.out.println(solution3.lengthOfLongestSubstring("pwwkew"));     // expects: 3
 
+
         // Q4
         // https://leetcode-cn.com/problems/number-of-islands/solution/dao-yu-lei-wen-ti-de-tong-yong-jie-fa-dfs-bian-li-/
         // System.out.println("\nQuestion4------↓↓");
         // Islands solution4 = new Islands();
 
+
         // Q5 hard!!
         // https://leetcode-cn.com/problems/median-of-two-sorted-arrays/
+
 
         // Q6 easy
         System.out.println("\nQuestion6------↓↓");
@@ -43,6 +49,7 @@ public class Main {
         int[] testCase6_2 = new int[]{-2,1,-3,4,-1,2,1,-5,4};
         System.out.println(solution6.maxSubArray(testCase6_1));     // expects: 23
         System.out.println(solution6.maxSubArray(testCase6_2));     // expects: 6
+
 
         // Q7 easy
         System.out.println("\nQuestion7------↓↓");
@@ -55,14 +62,25 @@ public class Main {
         minStack.pop();
         System.out.println(minStack.getMin());      // expects: -5
 
+
         // Q8 easy
-        System.out.println("\nQuestion8------↓↓");
+        // https://leetcode-cn.com/problems/find-n-unique-integers-sum-up-to-zero/
+
+
+        // Q10 easy
+        System.out.println("\nQuestion10-----↓↓");
         StockBestTime solution8 = new StockBestTime();
         // Test case
         int[] testCase8_1 = new int[]{7,1,5,3,6,4};
         int[] testCase8_2 = new int[]{7,6,8,3,1};
         System.out.println(solution8.maxProfit(testCase8_1));      // expects: 5
         System.out.println(solution8.maxProfit(testCase8_2));      // expects: 2
+
+
+        // Q12
+        System.out.println("\nQuestion12-----↓↓");
+        RotatedSortedArrSearch solution12 = new RotatedSortedArrSearch();
+
 
 //        Q13
 //        https://leetcode-cn.com/problems/letter-combinations-of-a-phone-number/solution/hui-su-dui-lie-tu-jie-by-ml-zimingmeng/
