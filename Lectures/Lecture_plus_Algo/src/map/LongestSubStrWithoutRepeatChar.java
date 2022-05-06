@@ -2,7 +2,7 @@ package map;
 
 import java.util.HashMap;
 
-public class LongestSubstrWithoutRepeatChar {
+public class LongestSubStrWithoutRepeatChar {
 
     public int lengthOfLongestSubstring(String s) {
         if (s.length() == 0) return 0;
