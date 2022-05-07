@@ -1,5 +1,7 @@
 import java.util.Arrays;
 
+
+import priorityQueue.KthLargest;
 import stack.ValidParentheses;              // easy
 import twoPointer.StringCompression;
 import map.LongestSubStrWithoutRepeatChar;  // easy
@@ -10,10 +12,12 @@ import stack.MinStack;                      // easy
 import symmetry.UniqueIntsSumZero;          // easy
 import greedy.MinDeletionsToGoodStr;
 import dp.StockBestTime;                    // easy
-
+import prefixSum.ContinuousSubArrSum;
+import backtrack.PhoneLetterCombinations;
 import binary.RotatedSortedArrSearch;
+import map.GroupAnagrams;
 
-
+import javax.swing.*;
 
 
 public class Main {
@@ -99,7 +103,6 @@ public class Main {
         System.out.println(solution9.minDeletions("aaabbbcc"));     // expects: 2
 
 
-
         // Q10 easy
         System.out.println("\nQuestion10-----↓↓");
         StockBestTime solution10 = new StockBestTime();
@@ -108,6 +111,12 @@ public class Main {
         int[] testCase10_2 = new int[]{7,6,8,3,1};
         System.out.println(solution10.maxProfit(testCase10_1));      // expects: 5
         System.out.println(solution10.maxProfit(testCase10_2));      // expects: 2
+
+
+        // Q11
+        System.out.println("\nQuestion11-----↓↓");
+        ContinuousSubArrSum solution11 = new ContinuousSubArrSum();
+
 
 
         // Q12
@@ -120,11 +129,30 @@ public class Main {
         System.out.println(solution12.search(testCase12_2, 3));     // expects: -1
 
 
+        // Q13
+        System.out.println("\nQuestion13-----↓↓");
+        PhoneLetterCombinations solution13 = new PhoneLetterCombinations();
+        // Test case
+        System.out.println(solution13.letterCombinations("23"));
 
-//        Q13
-//        https://leetcode-cn.com/problems/letter-combinations-of-a-phone-number/solution/hui-su-dui-lie-tu-jie-by-ml-zimingmeng/
-//        System.out.println("Question13");
-//        PhoneLetterCombinations solution13 = new PhoneLetterCombinations();
-//        System.out.println(solution13.letterCombinations("23"));
+
+        // Q14
+        System.out.println("\nQuestion14-----↓↓");
+        GroupAnagrams solution14 = new GroupAnagrams();
+        String[] testCase14_1 = new String[] {
+                "eat","tea","tan","ate","nat","bat"
+        };
+        System.out.println(solution14.groupAnagrams(testCase14_1));
+
+        // Q15
+        System.out.println("\nQuestion14-----↓↓");
+        KthLargest solution15 = new KthLargest();
+        int[] testCase15_1 = new int[]{3,2,1,5,6,4};
+        System.out.println(solution15.findKthLargest(testCase15_1, 2));     // expects: 5
+
+        
+
+
+
     }
 }
