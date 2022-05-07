@@ -8,7 +8,7 @@ import binary.MedianSortedArr;              // hard
 import dp.MaxSumSubArray;                   // easy
 import stack.MinStack;                      // easy
 import symmetry.UniqueIntsSumZero;          // easy
-
+import greedy.MinDeletionsToGoodStr;
 import dp.StockBestTime;                    // easy
 
 import binary.RotatedSortedArrSearch;
@@ -93,6 +93,11 @@ public class Main {
 
 
         // Q9
+        System.out.println("\nQuestion9------↓↓");
+        MinDeletionsToGoodStr solution9 = new MinDeletionsToGoodStr();
+        // Test case
+        System.out.println(solution9.minDeletions("aaabbbcc"));     // expects: 2
+
 
 
         // Q10 easy

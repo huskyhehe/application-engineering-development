@@ -1,4 +1,4 @@
-## dfs
+## dfs 1
 ```java
 public class Islands {
     public int numIslands(char[][] grid) {
@@ -30,32 +30,42 @@ public class Islands {
 }
 ```
 
-## Binary
+## two pointers 1
 ```java
-public class RotatedSortedArrSearch {
-    public int search(int[] nums, int target) {
-
-        if (nums.length == 0) return -1;
-
-        int left = 0;
-        int right = nums.length - 1;
-
-        while (left <= right) {
-            int mid = (left + right) / 2;
-            if (nums[mid] == target) return mid;
-            if (nums[left] <= nums[mid]) {
-                if (nums[left] <= target && target < nums[mid]) right = mid - 1;
-                else left = mid + 1;
-            } else {
-                if (nums[mid] < target && target <= nums[right]) left = mid + 1;
-                else right = mid - 1;
+public class StringCompression {
+    public int compress(char[] chars) {
+        int write = 0, left = 0;
+        for (int read = 0; read < chars.length; read++) {
+            if (read == chars.length - 1 || chars[read] != chars[read + 1]) {
+                chars[write++] = chars[read];
+                int num = read - left + 1;
+                if (num > 1) {
+                    int anchor = write;
+                    while (num > 0) {
+                        chars[write++] = (char) (num % 10 + '0');
+                        num /= 10;
+                    }
+                    reverse(chars, anchor, write - 1);
+                }
+                left = read + 1;
             }
         }
-        return -1;
+        return write;
+    }
+
+    public void reverse(char[] chars, int left, int right) {
+        while (left < right) {
+            char temp = chars[left];
+            chars[left] = chars[right];
+            chars[right] = temp;
+            left ++;
+            right --;
+        }
     }
 }
 ```
-## dp
+
+## dp 2
 ```java
 public class MaxSumSubArray {
     public int maxSubArray(int[] nums) {
@@ -87,7 +97,31 @@ public class StockBestTime {
 }
 ```
 
-## map
+## greedy 1
+```java
+public class MinDeletionsToGoodStr {
+    public int minDeletions(String s) {
+
+        int[] freq = new int[26];
+        for (char ch : s.toCharArray()) {
+            freq[ch - 'a'] ++;
+        }
+        Arrays.sort(freq);
+
+        int expected = freq[25];
+        int res = 0;
+        for (int i = 25; i >= 0; i --) {
+            if (freq[i] == 0) break;
+            if(freq[i] <= expected) expected = freq[i];
+            else res += freq[i] - expected;
+            if (expected > 0) expected --;
+        }
+        return res;
+    }
+}
+```
+
+## map 2
 ```java
 public class LongestSubStrWithoutRepeatChar {
     public int lengthOfLongestSubstring(String s) {
@@ -110,8 +144,33 @@ public class LongestSubStrWithoutRepeatChar {
     }
 }
 ```
+```java
+public class ContinuousSubArrSum {
+    public boolean checkSubarraySum(int[] nums, int k) {
+        int m = nums.length;
+        if (m < 2) {
+            return false;
+        }
+        Map<Integer, Integer> map = new HashMap<Integer, Integer>();
+        map.put(0, -1);
+        int remainder = 0;
+        for (int i = 0; i < m; i++) {
+            remainder = (remainder + nums[i]) % k;
+            if (map.containsKey(remainder)) {
+                int prevIndex = map.get(remainder);
+                if (i - prevIndex >= 2) {
+                    return true;
+                }
+            } else {
+                map.put(remainder, i);
+            }
+        }
+        return false;
+    }
+}    
+```
 
-## stack
+## stack 2
 ```java
 public class ValidParentheses {
     public boolean isValid(String s) {
@@ -165,7 +224,33 @@ public class MinStack {
 }
 ```
 
-## symmetry
+## binary 1
+```java
+public class RotatedSortedArrSearch {
+    public int search(int[] nums, int target) {
+
+        if (nums.length == 0) return -1;
+
+        int left = 0;
+        int right = nums.length - 1;
+
+        while (left <= right) {
+            int mid = (left + right) / 2;
+            if (nums[mid] == target) return mid;
+            if (nums[left] <= nums[mid]) {
+                if (nums[left] <= target && target < nums[mid]) right = mid - 1;
+                else left = mid + 1;
+            } else {
+                if (nums[mid] < target && target <= nums[right]) left = mid + 1;
+                else right = mid - 1;
+            }
+        }
+        return -1;
+    }
+}
+```
+
+## symmetry 1
 ```java
 public class UniqueIntsSumZero {
     public int[] sumZero(int n) {
