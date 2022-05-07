@@ -13,7 +13,7 @@ import java.util.Map;
 
 public class Solution1 {
     public boolean isValid(String s) {
-        //TODO: Write your code here
+
         Map<Character, Character> map = new HashMap<>();
         map.put(')', '(');
         map.put(']', '[');

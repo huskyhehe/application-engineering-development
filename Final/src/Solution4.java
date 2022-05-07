@@ -5,6 +5,7 @@
 
 public class Solution4 {
     public int[] sumZero(int n) {
+
         int[] res = new int[n];
         int i = 0;
 
