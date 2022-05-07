@@ -9,12 +9,11 @@
 import java.util.Deque;
 import java.util.HashMap;
 import java.util.LinkedList;
-import java.util.Map;
 
 public class Solution1 {
     public boolean isValid(String s) {
 
-        Map<Character, Character> map = new HashMap<>();
+        HashMap<Character, Character> map = new HashMap<>();
         map.put(')', '(');
         map.put(']', '[');
         map.put('}', '{');
