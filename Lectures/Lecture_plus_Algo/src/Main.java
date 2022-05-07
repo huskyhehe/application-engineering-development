@@ -1,7 +1,7 @@
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 
-
-import priorityQueue.KthLargest;
 import stack.ValidParentheses;              // easy
 import twoPointer.StringCompression;
 import map.LongestSubStrWithoutRepeatChar;  // easy
@@ -16,6 +16,10 @@ import prefixSum.ContinuousSubArrSum;
 import backtrack.PhoneLetterCombinations;
 import binary.RotatedSortedArrSearch;
 import map.GroupAnagrams;
+import priorityQueue.KthLargest;
+import dp.WordBreak;
+import direction.Robot;
+import binary.FirstLastPosition;
 
 import javax.swing.*;
 
@@ -31,7 +35,7 @@ public class Main {
         System.out.println(solution1.isValid("(]"));        // expects: false
 
 
-        // Q2 string compression
+        // Q2
         System.out.println("\nQuestion2------↓↓");
         StringCompression solution2 = new StringCompression();
         // Test case
@@ -145,14 +149,30 @@ public class Main {
         System.out.println(solution14.groupAnagrams(testCase14_1));
 
         // Q15
-        System.out.println("\nQuestion14-----↓↓");
+        System.out.println("\nQuestion15-----↓↓");
         KthLargest solution15 = new KthLargest();
         int[] testCase15_1 = new int[]{3,2,1,5,6,4};
         System.out.println(solution15.findKthLargest(testCase15_1, 2));     // expects: 5
 
-        
+        // Q16
+        System.out.println("\nQuestion16-----↓↓");
+        WordBreak solution16 = new WordBreak();
+        String s = "applepenapple";
+        List<String> wordDict = new ArrayList<String>();
+        wordDict.add("apple");
+        wordDict.add("pen");
+        System.out.println(solution16.wordBreak(s, wordDict));      // expects: true;
 
+        // Q17
+        System.out.println("\nQuestion17-----↓↓");
+        Robot solution17 = new Robot();
+        System.out.println(solution17.isRobotBounded("GGLL"));   // expects: true
 
+        // Q18
+        System.out.println("\nQuestion18-----↓↓");
+        FirstLastPosition solution18 = new FirstLastPosition();
+        int[] testCase18_1 = new int[]{5,7,7,8,8,10};
+        System.out.println(Arrays.toString(solution18.searchRange(testCase18_1, 6))); //expects: [-1,-1]
 
     }
 }
