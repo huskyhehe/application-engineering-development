@@ -23,7 +23,7 @@ TA’s would be grading all the assignments and tracking attendance for code lab
 
 - Final 15%
 
-- Code Labs attendance and participation: 20 %
+- Code Labs attendance and participation: 20%
 
 
 ### Academic Honesty:   
