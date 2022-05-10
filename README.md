@@ -1,1 +1,1 @@
-# info5100 Course Materials
+# info5100
