@@ -26,7 +26,7 @@ public class MinStack {
 
     // gets the top element of the stack.
     public int top() {
-        return minStack.getFirst();
+        return helperStack.getFirst();
     }
 
     // retrieves the minimum element in the stack.
